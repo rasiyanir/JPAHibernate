@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    
+    <persistence-unit name="FirstProject" transaction-type="RESOURCE_LOCAL">
+   		<!-- <provider>com.hibernate.ejb.HibernateEntityManager</provider> -->
+        <class>com.wellsbank.entities.Account</class>
+        <class>com.wellsbank.entities.Customer</class> 
+        <class>com.wellsbank.entities.Employee</class>      
+     	<!-- <class>com.wellsbank.entities.Login</class> 
+      -->
+     	
+        <properties>
+            <!-- Configuring The Database Connection Details -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/riyaz" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="Riyaz@123" />   
+             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />        
+        </properties>
+    </persistence-unit>
+
+
+	<persistence-unit name="classProject" transaction-type="RESOURCE_LOCAL">
+   		<!-- <provider>com.hibernate.ejb.HibernateEntityManager</provider> -->
+        <class>com.wellsbank.entities.Brand</class>      
+     	
+        <properties>
+            <!-- Configuring The Database Connection Details -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/riyaz" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="Riyaz@123" />   
+             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" /> 
+           <!--  <property name="hibernate.hbm2ddl.auto" value="create"></property>  -->      
+        </properties>
+    </persistence-unit>
+	
+</persistence>
